@@ -1,7 +1,8 @@
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-        .register('/sw.js')
-        .then(function () {
-            console.log('Service worker registered!');
-    });
-}
+self.addEventListener('install', function (event) {
+    console.log('[Service Worker] Installing service worker ...', event);
+});
+
+self.addEventListener('activate', function (event) {
+    console.log('[Service Worker] Activating service worker ...', event);
+    return self.clients.claim();
+});
