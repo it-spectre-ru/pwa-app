@@ -1,2 +1,12 @@
 .idea
 node_modules
+app
+build.gradle
+gradle.properties
+gradlew
+gradlew.bat
+local.properties
+pwa.iml
+settings.gradle
+.gradle
+gradle
